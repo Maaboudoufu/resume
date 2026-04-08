@@ -1,0 +1,186 @@
+%-------------------------
+% Resume in Latex
+% Author : Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    \textbf{\Huge \scshape Jason Tsao} \\ \vspace{1pt}
+    \href{mailto:jason.p.tsao@sjsu.edu}{\underline{jason.p.tsao@sjsu.edu}} $|$ 
+    \href{https://linkedin.com/in/jtsaoo/}{\underline{linkedin.com/in/jtsaoo}} $|$
+    \href{https://github.com/Maaboudoufu/}{\underline{github.com/maaboudoufu}} $|$
+    \href{https://maaboudoumei.org/}{\underline{maaboudoumei.org}}
+\end{center}
+
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {San Jose State University}{San Jose, CA}
+      {Bachelor of Science in Computer Engineering, Minor in Japanese (GPA 3.65)}{Aug. 2024 -- June 2028}
+      \resumeItemListStart
+        \resumeItem{\textbf{Organizations:} Software and Computer Engineering Society (Developer); Japanese Student Association (Officer); Hong Kong Student Association (Officer)}
+        \resumeItem{\textbf{Relevant Coursework:} Programming Concepts \& Methodology; Object-Oriented Concepts \& Methodology; Assembly Language Programming; Introduction to Circuit Analysis; Linear Algebra; Multivariable Calculus}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Information Technology Technician}{Feb. 2026 -- Present}
+      {Student Union, Inc. of SJSU}{San Jose, CA}
+      \resumeItemListStart
+        \resumeItem{Maintained and troubleshot Windows/Mac systems, Active Directory, and Windows Server infrastructure; supported workstation deployment, imaging, and patch management for a student body of 40,000.}
+        \resumeItem{Developed PowerShell scripts to automate system administration tasks including OS upgrades, patch deployment, software installations, and routine maintenance processes.}
+        \resumeItem{Supported network connectivity (TCP/IP, DHCP, DNS) and infrastructure including switches, firewalls, and printers; managed SSL certificate installations and secure reverse proxy HTTPS connections via IIS.}
+        \resumeItem{Utilized Qualys, Sophos Central, Jamf, and Intune for endpoint security monitoring, vulnerability remediation, and device compliance; deployed Zabbix on Linux for infrastructure monitoring with custom triggers and alerting.}
+        \resumeItem{Used Lansweeper for ticketing, asset tracking, and system inventory; maintained detailed documentation of hardware, software, and IT procedures.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+
+%-----------PROJECTS-----------
+\section{Projects}
+    \resumeSubHeadingListStart
+        \resumeProjectHeading
+            {\textbf{\href{https://github.com/Nayab-23/SeedHackathon}{StudyGuard}} $|$ \emph{Python, FastAPI, OpenCV, OpenAI Whisper, SQLAlchemy, NVIDIA Jetson Orin Nano}}{}
+            \resumeItemListStart
+                \resumeItem{Awarded \textbf{2nd Place} at the Seeed Embodied AI Hackathon; built a focus-monitoring system with a dynamically changing DNS server and Reachy Mini robot for supervision.}
+                \resumeItem{Developed a classification pipeline with OpenCV and GPT-4V classifying focus states every 10s, streaming live video to a FastAPI dashboard, with a Whisper-powered voice agent driving robot gestures and dnsmasq allowlist updates.}
+            \resumeItemListEnd
+        \resumeProjectHeading
+            {\textbf{\href{https://github.com/Maaboudoufu/portfolio}{Portfolio Website}} $|$ \emph{React 19, CSS, GitHub Actions, PM2, Oracle VPS, Nginx}}{}
+            \resumeItemListStart
+                \resumeItem{Designed and developed a terminal-themed personal portfolio site using React 19 with custom CSS, featuring sections for experience, skills, certifications, projects, and contact.}
+                \resumeItem{Built a CI/CD pipeline with GitHub Actions that runs automated tests on push, then SSHs into an Oracle VPS to pull, build, and restart the app with PM2 behind an Nginx reverse proxy.}
+            \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{Home Lab} $|$ \emph{WireGuard, Pi-hole, Nginx, Vaultwarden, Docker, Cloudflare}}{}
+          \resumeItemListStart
+            \resumeItem{Implemented a WireGuard VPN on Oracle VPS for private mesh-style networking with an Nginx reverse proxy and SSL/TLS certificates via Cloudflare; self-hosted Vaultwarden and Ollama with Docker Compose.}
+            \resumeItem{Integrated the local Ollama instance with OpenClaw to build an always-on AI agent that automates daily workflows including scheduling, email triage, and task management across messaging platforms.}
+          \resumeItemListEnd
+
+    \resumeSubHeadingListEnd
+
+
+%-----------TECHNICAL SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages}{: C/C++, Assembly, JavaScript, HTML/CSS, Bash/Zsh, PowerShell} \\
+     \textbf{Frameworks \& Libraries}{: React.js, Node.js, FastAPI, SQLAlchemy} \\
+     \textbf{Infrastructure \& DevOps}{: TCP/IP, DHCP, DNS, VLAN, VPN (WireGuard), Nginx, SSL/TLS, Docker, Linux System Administration, Git, GitHub Actions, CI/CD} \\
+     \textbf{Security \& Endpoint Management}{: Qualys, Sophos Central, Jamf, Intune, Active Directory, Windows Server} \\
+     \textbf{Certifications}{: Technical Support Fundamentals (Google); Vulnerability Management Detection and Response (Qualys)} \\
+     \textbf{Spoken Languages}{: English (Native) $|$ Japanese (Limited Working Proficiency) $|$ Chinese (Elementary Proficiency)} \\
+    }}
+ \end{itemize}
+
+
+%-----------REFERENCES-----------
+\section{References}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Jeffory Toone - IT Support Specialist} \\
+     \href{mailto:jeffory.toone@sjsu.edu}{\underline{jeffory.toone@sjsu.edu}}
+    }}
+ \end{itemize}
+
+%-------------------------------------------
+\end{document}
